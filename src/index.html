@@ -8,10 +8,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=link" />
-        <script src="https://unpkg.com/htmx.org@2.0.4"></script>
-        <script src="https://unpkg.com/htmx-ext-client-side-templates@2.0.0/client-side-templates.js"></script>
-        <script src="https://unpkg.com/mustache@latest"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.2.4/nunjucks.min.js"></script>
         <title>k16em.net</title>
     </head>
     <body>
@@ -23,29 +19,85 @@
                 <img class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0" src="/assets/images/icons/cat.jpg" alt="黒猫のアイコン" />
                 <div class="space-y-2 text-center sm:text-left">
                     <div class="space-y-0.5">
-                    <p class="text-lg font-semibold text-black">kei-s16</p>
+                    <p class="text-lg font-semibold text-black">k16em</p>
                     <p class="font-medium text-gray-500">neovimとかarchlinuxとか使って遊んでます</p>
                 </div>
             </div>
         </section>
         <section>
-          <div hx-ext="client-side-templates">
-                <div hx-get="/assets/data/links.json" hx-swap="innerHTML" hx-target="#content" nunjucks-template="links" hx-trigger="load">
-                <div id="content"></div>
-                <script type="template" id="links">
-                    {% for link in links %}
-                    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
-                      <div class="size-12 shrink-0 p-3">
-                        <span class="material-symbols-outlined">link</span>
-                      </div>
-                      <div>
-                        <div class="text-lg font-bold text-black"><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></div>
-                        <p class="text-gray-500">{{ link.description }}</p>
-                      </div>
-                    </div>
-                    {% endfor %}
-                </script>
-          </div>
+	    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
+	      <div class="size-12 shrink-0 p-3">
+		<span class="material-symbols-outlined">link</span>
+	      </div>
+	      <div>
+		<div class="text-lg font-bold text-black"><a href="https://github.com/k16em" target="_blank">GitHub</a></div>
+		<p class="text-gray-500">GitHub</p>
+	      </div>
+	    </div>
+	    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
+	      <div class="size-12 shrink-0 p-3">
+		<span class="material-symbols-outlined">link</span>
+	      </div>
+	      <div>
+		<div class="text-lg font-bold text-black"><a href="https://blog.k16em.net" target="_blank">blog</a></div>
+		<p class="text-gray-500">比較的ちゃんと書いてるブログ</p>
+	      </div>
+	    </div>
+	    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
+	      <div class="size-12 shrink-0 p-3">
+		<span class="material-symbols-outlined">link</span>
+	      </div>
+	      <div>
+		<div class="text-lg font-bold text-black"><a href="https://sizu.me/k16em" target="_blank">しずかなインターネット</a></div>
+		<p class="text-gray-500">ウソかホントかわからない話を書く</p>
+	      </div>
+	    </div>
+	    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
+	      <div class="size-12 shrink-0 p-3">
+		<span class="material-symbols-outlined">link</span>
+	      </div>
+	      <div>
+		<div class="text-lg font-bold text-black"><a href="https://mixi.social/@kei_s16" target="_blank">mixi2</a></div>
+		<p class="text-gray-500">乗り換えたい</p>
+	      </div>
+	    </div>
+	    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
+	      <div class="size-12 shrink-0 p-3">
+		<span class="material-symbols-outlined">link</span>
+	      </div>
+	      <div>
+		<div class="text-lg font-bold text-black"><a href="https://twitter.com/_kei_s" target="_blank">Twitter</a></div>
+		<p class="text-gray-500">Twitter(恥)</p>
+	      </div>
+	    </div>
+	    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
+	      <div class="size-12 shrink-0 p-3">
+		<span class="material-symbols-outlined">link</span>
+	      </div>
+	      <div>
+		<div class="text-lg font-bold text-black"><a href="https://scrapbox.io/k16em/" target="_blank">Scrapbox</a></div>
+		<p class="text-gray-500">雑多なメモ置き場</p>
+	      </div>
+	    </div>
+	    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
+	      <div class="size-12 shrink-0 p-3">
+		<span class="material-symbols-outlined">link</span>
+	      </div>
+	      <div>
+		<div class="text-lg font-bold text-black"><a href="https://github.com/kei-s16.gpg" target="_blank">GPG公開鍵</a></div>
+		<p class="text-gray-500">Keybaseが対応してない形式にしてしまったのでこれが正です</p>
+	      </div>
+	    </div>
+	    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mt-2 mb-2">
+	      <div class="size-12 shrink-0 p-3">
+		<span class="material-symbols-outlined">link</span>
+	      </div>
+	      <div>
+		<div class="text-lg font-bold text-black"><a href="https://keybase.io/k16em" target="_blank">Keybase</a></div>
+		<p class="text-gray-500">Keybase</p>
+	      </div>
+	    </div>
+
         </section>
         <footer class="flex justify-center gap-2 p-4">
             <h1 class="text-xs ">k16em.net</h1>
