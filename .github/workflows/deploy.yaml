@@ -27,8 +27,6 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: "ビルド"
         run: pnpm run build
-      - name: "ファイルのコピー"
-        run: cp -r ./src/assets/data ./src/dist/assets/data
 
       - name: "artifactに保存する"
         id: deployment
